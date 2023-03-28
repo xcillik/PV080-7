@@ -1,6 +1,6 @@
+import urllib
 import yaml
 import flask
-import urllib
 
 app = flask.Flask(__name__)
 
@@ -24,7 +24,7 @@ def print_nametag(format_string, person):
 
 def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
-    exec(f"import urllib{urllib_version} as urllib", globals())
+    # exec(f"import urllib{urllib_version} as urllib", globals())
     # Fetch and print the requested URL
 
     try:
@@ -67,4 +67,3 @@ if __name__ == '__main__':
     elif choice == "4":
         password = input("Enter master password: ")
         authenticate(password)
-
